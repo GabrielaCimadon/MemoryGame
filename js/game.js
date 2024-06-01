@@ -1,4 +1,6 @@
 const grid = document.querySelector('.grid');
+const spanPlayer = document.querySelector('.player')
+const timer = document.querySelector('.timer')
 
 const personagem = [
     'bowser',
@@ -27,7 +29,8 @@ const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card')
 
     if (disableCards.length == 20){
-        alert('Parabéns, você conseguiu!')
+        clearInterval(this.loop);
+        alert(`Parabéns, ${spanPlayer.innerHTML} ! Seu tempo foi: ${timer.innerHTML}`);
     }
 }
 
@@ -104,4 +107,16 @@ const loadgame = () => {
 
     })
 }
-loadgame()
+
+const startTimer = ()=> {
+    this.loop = setInterval(() => {
+      const currentTime = Number(timer.innerHTML);
+      timer.innerHTML = currentTime + 1;
+    }, 1000);
+
+}
+window.onload = () =>{
+    spanPlayer.innerHTML = localStorage.getItem('player');
+    startTimer();
+    loadgame()
+}
