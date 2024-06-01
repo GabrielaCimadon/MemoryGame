@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(115, 29, 29);
+    background-color: rgba(207, 29, 29, 0.971);
     justify-content: center;
 }
 .login-header {
@@ -17,13 +17,16 @@
 }
 
 .login_header img {
-    width: 300px;
+    width: 400px;
+
 
 
 }
 .login_header h1 {
     color: rgb(22, 196, 65);
-   font-size: 1.5em; 
+   font-size: 2em; 
+   padding: 15px ;
+   
 }
 
 .login_input {
@@ -38,7 +41,7 @@ padding: 15px;
 width: 100%;
 }
 .login_button {
-    background-color: rgb(205, 45, 45) ;
+    background-color: rgb(45, 205, 53) ;
     border-radius: 8px;
     color:white ;
     cursor: pointer;
